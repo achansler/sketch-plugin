@@ -102,3 +102,7 @@ textarea {
 .floating_comment_btn_visbible {
   opacity: 1;
 }
+
+.suggetion_text {
+  background-color: red;
+}

@@ -157,12 +157,17 @@ function handleClickComment() {
 function handleChange(event){
   if(event.target.value === 'Suggesting') {
     console.log(`You're now suggesting`);
-    main.style.backgroundColor = "red";
+    main.addEventListener('click', function() {
+      const editor = document.querySelector('.editor');
+      editor.insertAdjacentHTML('afterbegin', '<div><p>This is some text</p></div>');
+    })
   } else {
-    console.log(event.target.value);
-  }
+    console.log(event.target.value); 
+   }
 }
 
+
+// modesDropdown.addEventListener('click', clickToSuggest);
 modesDropdown.addEventListener('change', handleChange);
 main.addEventListener('click', pageY);
 main.addEventListener('mousedown', opacityChangeUp);
